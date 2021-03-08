@@ -22,11 +22,8 @@ namespace PlayGround {
                 Console.WriteLine(getMenu());
                 string input = getUserInput();
                 if (input.ToLower().Equals("q")) break;
-                if (inputIsValid(input)) {
-                    playList[selection-1].Play();
-                } else {
-                    Console.WriteLine("Sorry, your input was invalid... Try again.");
-                }
+                if (inputIsValid(input)) playList[selection-1].Play();
+                else Console.WriteLine("Sorry, your input was invalid... Try again.");
             }
             Console.WriteLine("Thanks for playing!");
             
